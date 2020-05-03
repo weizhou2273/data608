@@ -1,0 +1,119 @@
+<html>
+
+
+<head><title>Data608. Assignment 6. Mikhail Groysman. 4/21/2019</title></head>
+
+
+
+<body>
+
+
+<h1>Data608. Assignment 6. Mikhail Groysman. 4/21/2019</h1>
+
+			
+
+
+<script type="text/javascript">
+
+
+// Function 1
+// Reversing word
+
+
+document.write('<p><b>Please enter a word below.</b></p>');
+
+</script>
+
+<script type="text/javascript">
+
+
+// Reverse functions
+
+
+function reverse(stringi){
+ 
+	var sreverse = "";
+
+	var slength=0;
+	slength=stringi.length;
+	for (i=0;i<slength;i++)
+	{sreverse=sreverse+stringi.substring(slength-i-1, slength-i); }
+
+
+	return(sreverse)
+	;
+};
+
+
+function reverse1(){
+    var t = document.getElementById("target");
+    t.innerHTML = reverse(document.getElementById('str').value);
+}
+
+// Function 2
+// creating table
+
+// Reverse functions
+
+
+function tableo(numi){
+ 
+	var body = document.getElementsByTagName('body')[0];
+	var t = document.createElement('table');	
+
+	for (i=0;i<5;i++){
+	var tr= document.createElement('tr');
+	for (j=0;j<4;j++)
+	{var td = document.createElement('td');	
+	td.appendChild(document.createTextNode(numi*(i*4+j+1)));	
+	tr.appendChild(td);
+	}
+	t.appendChild(tr);
+	}
+	body.appendChild(t);
+	return;
+	;
+};
+
+
+function tableo1(){
+    var t1 = document.getElementById("target1");
+    t1.innerHTML = tableo(document.getElementById('num').value);
+}
+
+
+</script>
+
+
+<p>
+<form>
+    <input id="str" type="string" size="40">
+    <input type="button" value="enter" onClick="reverse1();">
+</form>
+</p>
+
+<script type="text/javascript">
+
+
+document.write('<p><b>Please enter a number below.</b></p>');
+
+</script>
+
+<p>
+<form>
+    <input id="num" type="num" size="1">
+    <input type="button" value="enter" onClick="tableo1();">
+</form>
+</p>
+<div id="target"></div>
+
+<div id="target1"></div>
+
+<script type="text/javascript" src="other_script.js"></script>
+
+<script type="text/javascript"> document.write(myScript());</script>
+
+
+
+</body>
+</html>
